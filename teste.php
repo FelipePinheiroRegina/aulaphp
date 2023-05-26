@@ -1,13 +1,14 @@
 <?php
-$carros = array('Polo', 'Golf', 'Fusca');
+$num1 = 2;
+$num2 = 5;
 
-foreach($carros as $carro){
-    echo "$carro \n";
-    echo "\n";
+$resp = soma($num1, $num2);
+imprimi($num1, $num2, $resp);
+
+function soma($x, $y){
+    return $x + $y;
 }
 
-for($c = 0; $c < count($carros); $c++){
-    echo $carros[$c];
-    echo "\n";
+function imprimi($x, $y, $r){
+    echo "A soma entre $x + $y = $r";
 }
-echo "I have $c cars in the parking lot";

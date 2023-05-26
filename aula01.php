@@ -91,4 +91,69 @@ for($c = 0; $c < count($carros); $c++){
 }
 echo "I have $c cars in the parking lot";
 
+// ------------------ VETORES E FUNÇÕES --------------
+// Como declarar um vetor e inserir dados nele
+
+// Arrays Númericos
+// 1 Forma
+$carros = array("Golf","Fusca","Ferrari");
+// 2 Forma
+$carros = ['Golzin','Astra','UPI'];
+// 3 Forma
+$carros[0] = "UPI";
+$carros[1] = "Voyage";
+$carros[2] = "Corola";
+// 4 Forma
+$carros[] = 'Fusquinha';
+$carros[] = 'Civic';
+$carros[] = 'Golf SporLine';
+
+// Arays Associativos
+// 1 Forma
+$carros = array('VW' => 'Gol', 'Chevrolet' => 'Camaro', 'Mercedez' => 'Evoque');
+// 2 Forma
+$carros = ['VW' => 'Gol', 'Chevrolet' => 'Camaro', 'Mercedez' => 'Evoque'];
+// 3 Forma
+$carros['VW'] = 'Gol';
+$carros['Chevrolet'] = 'Camaro';
+$carros['Ford'] = 'FORD KA';
+
+// Arrays Misto
+$carros = array(
+    'VW' => "Polo", 
+    0 => "Felipe", 
+    'Chevrolet' => "Camaro", 
+    1 => "Daniel"
+);
+
+// Varias funções para mexer nos arrays
+// printar todo o array
+print_r($carros);
+// contar valores de um array
+count($carros);
+// para remover valores de um array
+unset($carros[0], $carros['Chevrolet']);
+// para remover valores de um array utilizando splice
+array_splice($carros, 2, 2);
+
+// ARRAYS MULTIDIMENSIONAIS
+$frutas = array('Vermelhas' => array("Morango", "Maçã", "Acerola"), 'Citricas' => array("Limão", "Laranja", "Kiwi"));
+
+print_r($frutas['Citricas'][1]);
+
+// FUNÇÕES EM PHP
+$num1 = 2;
+$num2 = 5;
+
+$resp = soma($num1, $num2);
+imprimi($num1, $num2, $resp);
+
+function soma($x, $y){
+    return $x + $y;
+}
+
+function imprimi($x, $y, $r){
+    echo "A soma entre $x + $y = $r";
+}
+
 
