@@ -72,3 +72,13 @@ try {
 } catch (PDOException $e) {
 	echo 'A conexão falhou e retornou a seguinte mensagem de erro: ' .$e->getMessage();
 }
+
+// Acessando o PostgreSQL
+$host = "localhost";
+$port = 5432;
+$user = "postgres";
+$pass = "admin123";                    # Nome config.php
+$name = "escola";
+$dsn = "pgsql : host = $host; port = $port; dbname = $name";
+
+require_once 'config.php'; # Reutilizando o a configuração acima.
